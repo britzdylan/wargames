@@ -12,7 +12,6 @@ class CfgConstants
 {
     // General Mission Settings
     DEBUG = 1; // Enable debug mode
-    MISSION_STARTED = 0; // Mission started flag
 };
 
 

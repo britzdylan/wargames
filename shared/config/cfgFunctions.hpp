@@ -1,4 +1,4 @@
-class G {
+class Global {
     file = "functions"
     class trace {};
     class freezeAi {};
