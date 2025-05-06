@@ -1,6 +1,6 @@
 class CfgIdentities
 {
-    class AC_B_mckay
+    class blu_mckay
     {
         name = "Mckay";
         nameSound = "Mckay";
@@ -10,7 +10,7 @@ class CfgIdentities
         pitch = 1;
     }
 
-    class AC_B_givens
+    class blu_givens
     {
         name = "Givens";
         nameSound = "Givens";
@@ -20,7 +20,7 @@ class CfgIdentities
         pitch = 1;
     }
 
-	class AC_B_walker
+	class blu_walker
 	{
 		name = "Walker";
 		nameSound = "Walker";
@@ -30,7 +30,7 @@ class CfgIdentities
 		pitch = 1;
 	};
 
-    class AC_B_everett
+    class blu_everett
 	{
         name = "Everett";
         nameSound = "Everett";
@@ -40,7 +40,7 @@ class CfgIdentities
         pitch = 1;
     };
 
-    class AC_B_lopez
+    class blu_lopez
     {
         name = "Lopez";
         nameSound = "Lopez";
@@ -50,7 +50,7 @@ class CfgIdentities
         pitch = 1;
     };
 
-    class AC_B_patterson
+    class blu_patterson
     {
         name = "Patterson";
         nameSound = "Patterson";
@@ -60,7 +60,7 @@ class CfgIdentities
         pitch = 1;
     };
 
-    class AC_B_alexis
+    class blu_alexis
     {
         name = "Alexis";
         nameSound = "Alexis";

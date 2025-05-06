@@ -1,7 +1,7 @@
 params [["_type", "all"], ["_enable", false]];
 _fileName = __FILE_NAME__;
 
-[_fileName, "This is a test"] call EAS_fnc_trace;
+[_fileName, ""] call EAS_fnc_trace;
 
 _arg = nil;
 
