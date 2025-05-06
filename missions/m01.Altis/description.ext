@@ -1,0 +1,8 @@
+#include "..\..\shared\config\description.hpp"
+
+class cfgFunctions {
+    class EAS 
+    {
+        #include "..\..\shared\config\cfgFunctions.hpp"
+    }
+}
