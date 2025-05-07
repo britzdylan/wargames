@@ -1,12 +1,12 @@
-params [["_loadout", "EAS_fnc_setIdentities"]]
+params [["_loadout", "EAS_fnc_unarmedSeal"]]
 _sealTeam = [blu_walker, blu_everett, blu_givens, blu_mckay, blu_lopez, blu_patterson];
 
-[_sealTeam] spawn vehicleVarName _loadout;
+[_sealTeam] spawn EAS_fnc_setIdentities;
 
 {
 	_x setSkill 1;
 	[_x, "Ghosts_RF"] call BIS_fnc_setUnitInsignia;
-	[_x] spawn EAS_fnc_unarmedSeal;
+	[_x] spawn vehicleVarName _loadout;
 
 	switch (vehicleVarName _x) do {
 		case "blu_walker": {
