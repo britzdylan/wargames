@@ -41,11 +41,6 @@ switch (_type) do {
 };
 
 // Make sure array is passed down
-if (typeName _arg != "ARRAY") then {
-	exitWith {
-		[_fileName, "Invalid argument passed to function."] call EAS_fnc_trace;
-	};
-};
 
 {
 	if (isNull _x) exitWith {};
