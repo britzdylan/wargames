@@ -1,4 +1,4 @@
-//
+// 
 
 // setup scene
 private _getConfigPos = {
@@ -14,15 +14,13 @@ private _getConfigPos = {
 	[_pos, _dir, _anim]
 };
 
-private _instructorData = ["instructor"] call _getConfigPos;
-private _instructorPos = _instructorData select 0;
-
 private _standingMen = [
 	blu_walker,
 	blu_mckay,
 	blu_givens,
 	blu_everett,
-	blu_lopez
+	blu_lopez,
+	blu_instructor
 ];
 
 private _seatingMen = [
@@ -30,7 +28,7 @@ private _seatingMen = [
 	blu_briefing_pilot
 ];
 
-private _standingPositions = ["standA", "standB", "standC", "standD", "standE"];
+private _standingPositions = ["standA", "standB", "standC", "standD", "standE", "instructor"];
 private _seatingPositions = ["chair1", "chair2"];
 
 {
@@ -56,3 +54,7 @@ private _seatingPositions = ["chair1", "chair2"];
 	};
 	sleep 0.1;
 } forEach _seatingMen;
+
+// start kb talk
+
+// reset units positions once done

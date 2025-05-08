@@ -9,10 +9,10 @@ sleep 2;
 ["EAS_briefing", "SUCCEEDED"] call BIS_fnc_missionTasks;
 
 // setting cinema mode
-// ["end_noBorder"] call EAS_fnc_cinemaMode;
+["end_noBorder"] call EAS_fnc_cinemaMode;
 [[3, 0], [3, 0], [3, 0], [3, 0], [3, 0]] call EAS_fnc_adjustVolume;
 
-// [] call EAS_fnc_freezeAi;
+[] call EAS_fnc_freezeAi;
 [] spawn EAS_fnc_briefing;
 
 // start
