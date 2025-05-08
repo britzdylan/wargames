@@ -1,10 +1,17 @@
 #include "..\..\shared\config\description.hpp"
 #include "cfgTaskDescriptions.hpp"
+#include "cfgConstants.hpp"
 
 class cfgFunctions {
     class EAS 
     {
         #include "..\..\shared\config\cfgFunctions.hpp"
+
+        class missionFlow {
+            file = "functions\flow";
+            class f00 {};
+            class f01 {};
+        }
 
         class cutscenes
         {

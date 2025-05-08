@@ -8,7 +8,7 @@ overviewTextLocked = "TAG 1-5 CO My super mission";
 onLoadIntroTime = 1;
 // loadScreen		= "images\loadScreen.paa";
 
-class CfgConstants
+class cfgGlobals
 {
     // General Mission Settings
     DEBUG = 1; // Enable debug mode
