@@ -23,7 +23,7 @@ case "EAS_briefing": {
 			west,
 			_taskID,
 			"",
-			"EAS_briefing_location",
+			EAS_briefing_location,
 			true,
 			nil,
 			true,
