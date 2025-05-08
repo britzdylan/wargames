@@ -1,0 +1,11 @@
+{
+  "name": "wargames",
+  "version": "1.0.0",
+  "description": "Single player narrative driven campaign for Arma 3 vanilla. Take on the role of multiple characters in a large ground war for control over Altis within a complex geo political atmosphere.",
+  "main": "~",
+  "scripts": {
+    "sync": "node .dev/syncFUnctions.js"
+  },
+  "author": "Dylan Britz",
+  "license": "ISC"
+}
