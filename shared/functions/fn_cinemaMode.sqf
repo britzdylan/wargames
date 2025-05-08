@@ -21,13 +21,18 @@ params [
 	["_fadeInDuration", 3, [0]],
 	["_fadeOutDuration", 3, [0]],
 	["_delayBeforeFadeIn", 0, [0]],
-	["_durationBetweenFades", 0, [0]]
+	["_durationBetweenFades", 0, [0]],
+	["_oldScreen", "", [""]]
 ];
 
 private _screenId = format ["screen-%1", str floor(random 10000)];
 private _useBorders = !(_preset in ["start_end_noBorder", "start_noBorder", "end_noBorder"]);
 private _startWithBlack = _preset in ["start_end", "start", "start_end_noBorder", "start_noBorder"];
 private _endWithBlack = _preset in ["start_end", "end", "start_end_noBorder", "end_noBorder"];
+
+if (_oldScreen != "") then {
+	[_oldScreen, false] call BIS_fnc_blackIn;
+};
 
 if (_startWithBlack) then {
 	[_screenId, false] call BIS_fnc_blackOut;

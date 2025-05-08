@@ -9,12 +9,14 @@ sleep 2;
 ["EAS_briefing", "SUCCEEDED"] call BIS_fnc_missionTasks;
 
 // setting cinema mode
-["end_noBorder"] call EAS_fnc_cinemaMode;
+_screenId = ["end_noBorder"] call EAS_fnc_cinemaMode;
 [[3, 0], [3, 0], [3, 0], [3, 0], [3, 0]] call EAS_fnc_adjustVolume;
 
 [] call EAS_fnc_freezeAi;
 [] spawn EAS_fnc_briefing;
-["start", 3, 3, 3, 20] call EAS_fnc_cinemaMode;
+
+["all", true] call EAS_fnc_freezeAi;
+["start", 3, 3, 0, 0, _screenId] call EAS_fnc_cinemaMode;
 
 // start
 
@@ -25,4 +27,4 @@ sleep 2;
 // end cutscene
 
 // call next flow
-[] call EAS_fnc_nextFlow;
+// [] call EAS_fnc_nextFlow;
