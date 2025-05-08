@@ -1,6 +1,6 @@
 params [["_file", __FILE_NAME__], ["_msg", ""]];
 
-_debug = getNumber (missionConfigFile >> "cfgConstants" >> "DEBUG");
+_debug = getNumber (missionConfigFile >> "cfgGlobals" >> "DEBUG");
 hint str _debug;
 if (_debug == 0) exitWith {};
 if (_debug == 1) then {
