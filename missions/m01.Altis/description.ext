@@ -1,8 +1,15 @@
 #include "..\..\shared\config\description.hpp"
+#include "cfgTaskDescriptions.hpp"
 
 class cfgFunctions {
     class EAS 
     {
         #include "..\..\shared\config\cfgFunctions.hpp"
+
+        class cutscenes
+        {
+            file = "functions\cutscenes";
+            class intro { };
+        };
     }
 }
