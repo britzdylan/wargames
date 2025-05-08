@@ -2,6 +2,7 @@
 #include "config\cfgTaskDescriptions.hpp"
 #include "config\cfgConstants.hpp"
 #include "config\cfgCutscenePositions.hpp"
+#include "config\cfgSounds.hpp"
 
 class cfgFunctions {
     class EAS 
@@ -21,20 +22,4 @@ class cfgFunctions {
             class briefing {};
         };
     }
-}
-
-class CfgSounds
-{
-    class yourSound
-    {
-        name = "yourSound";
-        sound[] = {"sounds\yourSound.ogg", 1, 1, 100};
-        titles[] = {};
-    };
-    class yourSound_02
-    {
-        name = "yourSound_02";
-        sound[] = {"sounds\yourSound_02.ogg", 1, 1, 100};
-        titles[] = {};
-    };
 };

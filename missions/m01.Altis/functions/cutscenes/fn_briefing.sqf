@@ -55,6 +55,6 @@ private _seatingPositions = ["chair1", "chair2"];
 	sleep 0.1;
 } forEach _seatingMen;
 
-// start kb talk
+// start talk
 
 // reset units positions once done
