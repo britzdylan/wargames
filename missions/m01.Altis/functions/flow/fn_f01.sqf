@@ -14,6 +14,7 @@ sleep 2;
 
 [] call EAS_fnc_freezeAi;
 [] spawn EAS_fnc_briefing;
+["start", 3, 3, 3, 20] call EAS_fnc_cinemaMode;
 
 // start
 

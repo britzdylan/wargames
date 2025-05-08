@@ -10,4 +10,4 @@ private _introDuration = getNumber (missionConfigFile >> "cfgConstants" >> "INTR
 sleep 1;
 "EAS_briefing" call BIS_fnc_missionTasks;
 
-[] call EAS_fnc_nextFlow; 
+[] call EAS_fnc_nextFlow;
