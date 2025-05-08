@@ -6,6 +6,8 @@ class Global {
     class initSealTeam {
         postInit = 1;
     };
+    class cinemaMode {};
+    class adjustVolume {};
 
 }
 class armory {
