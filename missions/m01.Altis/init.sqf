@@ -6,4 +6,4 @@ waitUntil {
 	EAS_MISSION_STARTED == true;
 };
 
-[] call EAS_fnc_f00;
+[] call EAS_fnc_nextFlow;

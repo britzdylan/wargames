@@ -1,6 +1,7 @@
 #include "..\..\shared\config\description.hpp"
 #include "cfgTaskDescriptions.hpp"
 #include "cfgConstants.hpp"
+#include "cfgCutscenePositions.hpp"
 
 class cfgFunctions {
     class EAS 
@@ -16,7 +17,8 @@ class cfgFunctions {
         class cutscenes
         {
             file = "functions\cutscenes";
-            class intro { };
+            class intro {};
+            class briefing {};
         };
     }
 }
