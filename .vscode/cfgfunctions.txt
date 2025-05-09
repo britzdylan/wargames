@@ -1,0 +1,17 @@
+
+    class EAS 
+    {
+
+        class missionFlow {
+            file = "functions\flow";
+            class f00 {};
+            class f01 {};
+        }
+
+        class cutscenes
+        {
+            file = "functions\cutscenes";
+            class intro {};
+            class briefing {};
+        };
+    }
