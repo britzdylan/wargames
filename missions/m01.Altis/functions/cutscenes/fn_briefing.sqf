@@ -1,5 +1,5 @@
 [[3, 0], [3, 0], [3, 0], [3, 0], [3, 0]] spawn EAS_fnc_adjustVolume;
-_screenId = ["end_noBorder"] call EAS_fnc_cinemaMode;
+[SCREEN_ID, "end_noBorder"] call EAS_fnc_cinemaMode;
 
 [] call EAS_fnc_freezeAi;
 
@@ -68,13 +68,13 @@ private _seatingPositions = ["chair1", "chair2"];
 
 ["all", true] call EAS_fnc_freezeAi;
 [[3, 1], [3, 1], [3, 1], [3, 1], [3, 1]] spawn EAS_fnc_adjustVolume;
-["start", 3, 3, 0, 3, _screenId] spawn EAS_fnc_cinemaMode;
+[SCREEN_ID, "start", 3, 3, 0, 3] spawn EAS_fnc_cinemaMode;
 
 // start talk
 sleep 3;
 // blu_instructor say3D ["yourSound", 30];
 // sleep 15;
-_screen2ID = ["end_noBorder", 3, 3, 0, 0] call EAS_fnc_cinemaMode;
+[SCREEN_ID, "end_noBorder", 3, 3, 0, 0] call EAS_fnc_cinemaMode;
 // reset units positions once done
 {
 	_ogPos = _x getVariable "EAS_unit_og_pos";
@@ -88,4 +88,4 @@ _screen2ID = ["end_noBorder", 3, 3, 0, 0] call EAS_fnc_cinemaMode;
 
 sleep 1;
 player switchMove "";
-["start_noBorder", 3, 3, 0, 0, _screen2ID] call EAS_fnc_cinemaMode;
+[SCREEN_ID, "start_noBorder", 3, 3, 0, 0] call EAS_fnc_cinemaMode;

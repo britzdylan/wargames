@@ -1,3 +1,4 @@
 class cfgConstants {
-    INTRO_DURATION = 10
+    INTRO_DURATION = 20
+    SCREEN_ID = "pypypypypy"
 };

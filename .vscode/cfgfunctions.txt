@@ -6,6 +6,7 @@
             file = "functions\flow";
             class f00 {};
             class f01 {};
+            class f02 {}
         }
 
         class cutscenes

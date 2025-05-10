@@ -17,26 +17,18 @@
 */
 
 params [
+	["_ID", "", [""]],
 	["_preset", "start_end", [""]],
 	["_fadeInDuration", 3, [0]],
 	["_fadeOutDuration", 3, [0]],
 	["_delayBeforeFadeIn", 0, [0]],
-	["_durationBetweenFades", 0, [0]],
-	["_oldScreen", "", [""]]
+	["_durationBetweenFades", 0, [0]]
 ];
 
-private _screenId = format ["screen-%1", str floor(random 10000)];
+// private _ID = format ["screen-%1", str floor(random 10000)];
 private _useBorders = !(_preset in ["start_end_noBorder", "start_noBorder", "end_noBorder"]);
 private _startWithBlack = _preset in ["start_end", "start", "start_end_noBorder", "start_noBorder"];
 private _endWithBlack = _preset in ["start_end", "end", "start_end_noBorder", "end_noBorder"];
-
-if (_oldScreen != "") then {
-	[_oldScreen, false] call BIS_fnc_blackIn;
-};
-
-if (_startWithBlack) then {
-	[_screenId, false] call BIS_fnc_blackOut;
-};
 
 if (_useBorders) then {
 	if (_startWithBlack) then {
@@ -51,7 +43,7 @@ if (_delayBeforeFadeIn > 0) then {
 };
 
 if (_startWithBlack) then {
-	[_screenId, true, _fadeInDuration] call BIS_fnc_blackIn;
+	[_ID, true, _fadeInDuration] call BIS_fnc_blackIn;
 	sleep _fadeInDuration;
 };
 
@@ -62,7 +54,7 @@ if (_durationBetweenFades > 0) then {
 
 if (_endWithBlack) then {
 	// Fade to black
-	[_screenId, true, _fadeOutDuration] call BIS_fnc_blackOut;
+	[_ID, true, _fadeOutDuration] call BIS_fnc_blackOut;
 	sleep _fadeOutDuration;
 };
 
@@ -74,14 +66,14 @@ if (_useBorders) then {
 	}
 };
 
-_screenId
+_ID
 
 // Example usage:
 // Simple start and end with default values
-// _screenId = ["start_end"] call fnc_cinematicEffect;
+// _ID = ["start_end"] call fnc_cinematicEffect;
 
 // Custom fade durations
-// _screenId = ["start_end", 2, 2] call fnc_cinematicEffect;
+// _ID = ["start_end", 2, 2] call fnc_cinematicEffect;
 
 // Full control with all parameters
-// _screenId = ["start", 3, 3, 1, 0, 5] call fnc_cinematicEffect;
+// _ID = ["start", 3, 3, 1, 0, 5] call fnc_cinematicEffect;
