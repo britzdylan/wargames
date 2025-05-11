@@ -22,5 +22,11 @@ class cfgFunctions {
             class intro {};
             class briefing {};
         };
+
+        class loadouts
+        {
+            file = "functions\loadouts";
+            class seal_tl;
+        }
     }
 };

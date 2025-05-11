@@ -21,7 +21,7 @@ params [
 	["_preset", "start_end", [""]],
 	["_fadeInDuration", 3, [0]],
 	["_fadeOutDuration", 3, [0]],
-	["_delayBeforeFadeIn", 0, [0]],
+	["_delay", 0, [0]],
 	["_durationBetweenFades", 0, [0]]
 ];
 
@@ -30,16 +30,16 @@ private _useBorders = !(_preset in ["start_end_noBorder", "start_noBorder", "end
 private _startWithBlack = _preset in ["start_end", "start", "start_end_noBorder", "start_noBorder"];
 private _endWithBlack = _preset in ["start_end", "end", "start_end_noBorder", "end_noBorder"];
 
+if (_delay > 0) then {
+	sleep _delay;
+};
+
 if (_useBorders) then {
 	if (_startWithBlack) then {
 		[0, 0, false, true] call BIS_fnc_cinemaBorder;
 	} else {
 		[0, _fadeInDuration, false, true] call BIS_fnc_cinemaBorder;
 	}
-};
-
-if (_delayBeforeFadeIn > 0) then {
-	sleep _delayBeforeFadeIn;
 };
 
 if (_startWithBlack) then {

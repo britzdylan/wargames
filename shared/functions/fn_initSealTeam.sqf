@@ -1,6 +1,4 @@
-_sealTeam = [blu_walker, blu_everett, blu_givens, blu_mckay, blu_lopez, blu_patterson];
-
-[_sealTeam] spawn EAS_fnc_setIdentities;
+[SEAL_TEAM] spawn EAS_fnc_setIdentities;
 
 {
 	_x setSkill 1;
@@ -27,4 +25,4 @@ _sealTeam = [blu_walker, blu_everett, blu_givens, blu_mckay, blu_lopez, blu_patt
 		};
 		default {};
 	};
-} forEach _sealTeam;
+} forEach SEAL_TEAM;
