@@ -9,7 +9,5 @@ class Global {
     class cinemaMode {};
     class adjustVolume {};
     class nextFlow {};
-}
-class armory {
-    class unarmedSeal {};
+    class applyLoadout {};
 }

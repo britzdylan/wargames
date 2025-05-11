@@ -26,7 +26,13 @@ class cfgFunctions {
         class loadouts
         {
             file = "functions\loadouts";
-            class seal_tl;
+            class lo_player {};
+            class lo_blu_everett {};
+            class lo_blu_givens {};
+            class lo_blu_lopez {};
+            class lo_blu_mckay {};
+            class lo_blu_walker {};
+            class lo_unarmedSeal {};
         }
     }
 };

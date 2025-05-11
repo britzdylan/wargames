@@ -15,4 +15,10 @@
             class intro {};
             class briefing {};
         };
+
+        class loadouts
+        {
+            file = "functions\loadouts";
+            class lo_player;
+        }
     }
