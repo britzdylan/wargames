@@ -31,9 +31,7 @@ SEAL_TEAM join player;
 
 [] spawn {
 	{
-		// for each group in AAF_BOAT_PATROL
 		{
-			// for each unit in the group
 			_x enableSimulation true;
 		} forEach units _x;
 	} forEach AAF_BOAT_PATROL;
@@ -42,53 +40,42 @@ SEAL_TEAM join player;
 [_EAS_boat_wp_1, _EAS_boat_wp_3] spawn {
 	{
 		params ["_EAS_boat_wp_1", "_EAS_boat_wp_3"];
-		// for each group in AAF_BOAT_PATROL
-		private _wp = _x addWaypoint [_EAS_boat_wp_1, 0];
-		// private _wp2 = _x addWaypoint [_EAS_boat_wp_3, 0];
+		private _wp = _x addWaypoint [_EAS_boat_wp_1, 150];
 		_wp setWaypointCombatMode "RED";
-		_wp setWaypointType "SAD";
-		_wp setWaypointSpeed "FULL";
 		sleep 0.1;
 	} forEach AAF_BOAT_PATROL;
 };
 
-[SCREEN_ID, "start", 3, 3, 5, 0] spawn EAS_fnc_cinemaMode; // always call last
+[SCREEN_ID, "start", 3, 3, 5, 0] spawn EAS_fnc_cinemaMode;
+
 waitUntil {
 	player inArea EAS_tr_dropZone;
 };
 
-// radio sequence
-// move boats
-[_EAS_boat_wp_2, _EAS_boat_wp_0, _EAS_boat_wp_1] spawn {
-	params ["_EAS_boat_wp_2", "_EAS_boat_wp_0", "_EAS_boat_wp_1"];
+[_EAS_boat_wp_2, _EAS_boat_wp_lz] spawn {
+	params ["_EAS_boat_wp_2", "_EAS_boat_wp_lz"];
 
-	_wp_blu_boat_escort_1 = blu_boat_escort_1 addWaypoint [_EAS_boat_wp_2, 0];
-	_wp_blu_boat_escort_1 setWaypointCombatMode "GREEN";
-	_wp_blu_boat_escort_0 = blu_boat_escort_0 addWaypoint [_EAS_boat_wp_0, 0];
-	_wp_blu_boat_escort_0 setWaypointCombatMode "GREEN";
-
-	_wp_EAS_boat_insert_0 = blu_boat_player addWaypoint [_EAS_boat_wp_1, 0];
-	_wp_EAS_boat_insert_0 setWaypointCombatMode "GREEN";
+	EAS_boat_escortG doMove _EAS_boat_wp_2;
+	EAS_boat_insertC doMove _EAS_boat_wp_lz;
 };
 
 sleep 5;
 
-// [_EAS_boat_wp_1] spawn {
-	// params ["_EAS_boat_wp_1"];
-	// private _heliType = getText (missionConfigFile >> "cfgConstants" >> "HELI_SUPPORT");
+[_EAS_boat_wp_1] spawn {
+	params ["_EAS_boat_wp_1"];
+	private _heliType = getText (missionConfigFile >> "cfgConstants" >> "HELI_SUPPORT");
 
-	// _insertHeli = createVehicle [_heliType, [getMarkerPos "EAS_spawn_heli" select 0, getMarkerPos "EAS_spawn_heli" select 1, 100], [], 0, "FLY"];
-	// _insertHeli allowDamage false;
-	// __insertHeliCrew = createVehicleCrew _insertHeli;
-	// _insertHeli engineOn true;
-	// _insertHeli setDir 229.053;
+	_insertHeli = createVehicle [_heliType, [getMarkerPos "EAS_spawn_heli" select 0, getMarkerPos "EAS_spawn_heli" select 1, 100], [], 0, "FLY"];
+	_insertHeli allowDamage false;
+	__insertHeliCrew = createVehicleCrew _insertHeli;
+	_insertHeli engineOn true;
+	_insertHeli setDir 229.053;
 
-	// _heliWp = __insertHeliCrew addWaypoint [_EAS_boat_wp_1, 100];
-	// _heliWp setWaypointType "LOITER";
-	// _heliWp setWaypointCombatMode "RED";
-	// _insertHeli flyInHeight 50;
-	//
-// };
+	_heliWp = __insertHeliCrew addWaypoint [_EAS_boat_wp_1, 100];
+	_heliWp setWaypointType "LOITER";
+	_heliWp setWaypointCombatMode "RED";
+	_insertHeli flyInHeight 50;
+};
 
 waitUntil {
 	{
@@ -97,51 +84,48 @@ waitUntil {
 	} count AAF_BOAT_PATROL > 0;
 };
 
+private _firedEH = EAS_boat_escort addEventHandler ["Fired", {
+	params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
+
+	    // set the flag to true when the boat fires
+	missionNamespace setVariable ["boatHasFired", true];
+
+	    // Optional: Remove the event handler if you only need to detect the first shot
+	_unit removeEventHandler ["Fired", _thisEventHandler];
+}];
+
 sleep 1;
+playSound "EAS_convo_aaf_boat_patrol_spotted";
 
-blu_boat_escort_1 setCombatMode "RED";
-blu_boat_escort_0 setCombatMode "RED";
+sleep 4;
 
-hint "ENEMY";
-_wp_EAS_boat_insert_1 = blu_boat_player addWaypoint [_EAS_boat_wp_lz, 0];
-_wp_EAS_boat_insert_1 setWaypointSpeed "FULL";
+[] spawn {
+	waitUntil {
+		missionNamespace getVariable ["boatHasFired", false];
+	};
+
+	    // do something after the boat has fired
+	playSound "EAS_convo_aaf_boat_patrol_firing";
+};
+EAS_boat_insertC setCombatMode "RED";
+EAS_boat_escortG setCombatMode "RED";
 
 waitUntil {
 	player inArea EAS_tr_beach;
 };
-sleep 1;
-unassignVehicle player;
 
+[SCREEN_ID, "end_noBorder", 5, 1, 0, 0] call EAS_fnc_cinemaMode;
+sleep 2;
+unassignVehicle player;
+EAS_boat_insert setVelocity [0, 0, 0];
+EAS_boat_insert setDir 0;
+EAS_boat_insertC doMove _EAS_boat_wp_1;
 {
 	_x setPos _EAS_beach_lz;
 } forEach units group player;
+
 group player setFormation "DIAMOND";
 group player setBehaviour "STEALTH";
 group player setCombatMode "GREEN";
-// move enemy boats
-// waiUntil enemy boats destroyed
-// call it in
-// fade to landingm
 
-// // // // 
-// EAS_boat_insert setPos getMarkerPos "EAS_boat_move";
-// EAS_boat_insert setDir 183.725;
-// EAS_boat_insert setVelocity [0, -20, 0];
-// [SCREEN_ID, "start_noBorder", 2, 0, 0, 0] call EAS_fnc_cinemaMode; // always call last
-// loadout squad
-// join squad player
-// move in boat
-// black in with borders
-// short radio message
-// wait until in trigger
-// drop sling load
-// remove border
-// wait for 1 minute
-// black in
-// move player to pos
-// black out
-// remove border
-// when close to beach
-// blackin fast
-// play cutscene 
-// call next flow
+[SCREEN_ID, "start_noBorder", 5, 1, 0, 0] call EAS_fnc_cinemaMode;
