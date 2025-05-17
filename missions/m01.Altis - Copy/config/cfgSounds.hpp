@@ -30,11 +30,13 @@ class CfgSounds
         forceTitles = 1;
     };
 
-    class EAS_ep001_convo_briefing
+    class EAS_convo_aaf_boat_patrol_firing
     {
-        name = "EAS_ep001_convo_briefing";
-        sound[] = {"sounds\EAS_ep001_convo_briefing.ogg", 3, 1, 25};
-        titles[] = {};
+        name = "EAS_convo_aaf_boat_patrol_firing";
+        sound[] = {"sounds\EAS_convo_aaf_boat_patrol_firing.ogg", 3, 1, 100};
+        titles[] = {
+            0, "Engaging targets!",
+        };
 
         forceTitles = 1;
     };

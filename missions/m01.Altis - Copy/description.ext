@@ -1,0 +1,38 @@
+#include "..\..\shared\config\description.hpp"
+#include "config\cfgTaskDescriptions.hpp"
+#include "config\cfgConstants.hpp"
+#include "config\cfgCutscenePositions.hpp"
+#include "config\cfgSounds.hpp"
+
+class cfgFunctions {
+    class EAS 
+    {
+        #include "..\..\shared\config\cfgFunctions.hpp"
+
+        class missionFlow {
+            file = "functions\flow";
+            class f00 {};
+            class f01 {};
+            class f02 {};
+        }
+
+        class cutscenes
+        {
+            file = "functions\cutscenes";
+            class intro {};
+            class briefing {};
+        };
+
+        class loadouts
+        {
+            file = "functions\loadouts";
+            class lo_player {};
+            class lo_blu_everett {};
+            class lo_blu_givens {};
+            class lo_blu_lopez {};
+            class lo_blu_mckay {};
+            class lo_blu_walker {};
+            class lo_unarmedSeal {};
+        }
+    }
+};

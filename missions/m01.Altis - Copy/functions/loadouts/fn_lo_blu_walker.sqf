@@ -1,0 +1,1 @@
+#include "..\..\..\..\shared\loadouts\seals\marksmen_combat.sqf";

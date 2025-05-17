@@ -3,9 +3,7 @@ class Global {
     class trace {};
     class freezeAi {};
     class setIdentities {};
-    class initSealTeam {
-        postInit = 1;
-    };
+    class initSealTeam {};
     class cinemaMode {};
     class adjustVolume {};
     class nextFlow {};
