@@ -13,13 +13,17 @@ sleep 10;
 EAS_man_wingman enableAI "ALL";
 
 EAS_veh_playerJet engineOn true;
+EAS_veh_wingmanJet engineOn true;
+
 // other pilot get in
 waitUntil {
 	isEngineOn EAS_veh_playerJet;
 };
-sleep 1;
+sleep 3;
 
 // radio sequence
 [
-	["Chief", "Jo, we just got raised to alert one!", 0]
+	["CT", "Raptor 4-6, your second in line", 0],
+	["You", "Raptor 4-6, roger", 3]
 ] spawn BIS_fnc_EXP_camp_playSubtitles;
+

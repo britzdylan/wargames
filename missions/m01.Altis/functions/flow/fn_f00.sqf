@@ -4,8 +4,6 @@ if (EAS_CURRENT_FLOW != 0) exitWith {};
 private _introDuration = getNumber (missionConfigFile >> "cfgConstants" >> "INTRO_DURATION");
 
 [] call EAS_fnc_freezeAi;
-// setup game AI
-
 // [] call EAS_fnc_intro;
 sleep 5;
 ["all", true] call EAS_fnc_freezeAi; // unFreeze all AI
