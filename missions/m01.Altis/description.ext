@@ -16,10 +16,16 @@ class cfgFunctions {
             class f02 {};
         }
 
+        class events {
+            file = "functions\events";
+            class areaJet {};
+        }
+
         class cutscenes
         {
             file = "functions\cutscenes";
             class intro {};
+            class commanderTalk {};
             class briefing {};
         };
 
