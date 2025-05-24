@@ -44,11 +44,6 @@ switch (_type) do {
 
 {
 	if (isNull _x) exitWith {};
-	// if (_enable) then {
-	// 	_x enableAI "ALL";
-	// } else {
-	// 	_x disableAI "ALL";
-	// };
 	_x enableSimulation _enable;
 	_x allowDamage _enable;
 } forEach _arg;

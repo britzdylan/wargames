@@ -17,18 +17,128 @@
 	[owner, taskID, description, destination, state, priority, showNotification, type, visibleIn3D] call BIS_fnc_taskCreate
 */
 
-case "EAS_briefing": {
+case "EAS_destroyPowerPlant": {
 	if (!(_taskExists)) then {
 		[
 			west,
 			_taskID,
 			"",
-			EAS_briefing_location,
+			getMarkerPos "EAS_destroyPowerPlantLocation",
+			"CREATED",
+			-1,
 			true,
-			nil,
+			"destroy",
+			false
+		] call BIS_fnc_taskCreate;
+	} else {
+		if (!(_taskCompleted) && {
+			typeName _this == typeName ""
+		}) then {
+			[_taskID, _this] call BIS_fnc_taskSetState;
+		};
+	};
+};
+
+case "EAS_destroyCommsTowerA": {
+	if (!(_taskExists)) then {
+		[
+			west,
+			_taskID,
+			"",
+			getMarkerPos "EAS_destroyCommsTowerALocation",
+			"CREATED",
+			-1,
 			true,
-			"whiteboard",
-			true
+			"destroy",
+			false
+		] call BIS_fnc_taskCreate;
+	} else {
+		if (!(_taskCompleted) && {
+			typeName _this == typeName ""
+		}) then {
+			[_taskID, _this] call BIS_fnc_taskSetState;
+		};
+	};
+};
+
+case "EAS_destroyCommsTowerB": {
+	if (!(_taskExists)) then {
+		[
+			west,
+			_taskID,
+			"",
+			getMarkerPos "EAS_destroyCommsTowerBLocation",
+			"CREATED",
+			-1,
+			true,
+			"destroy",
+			false
+		] call BIS_fnc_taskCreate;
+	} else {
+		if (!(_taskCompleted) && {
+			typeName _this == typeName ""
+		}) then {
+			[_taskID, _this] call BIS_fnc_taskSetState;
+		};
+	};
+};
+
+case "EAS_reconForTargets": {
+	if (!(_taskExists)) then {
+		[
+			west,
+			_taskID,
+			"",
+			objNull,
+			"CREATED",
+			-1,
+			true,
+			"recon",
+			false
+		] call BIS_fnc_taskCreate;
+	} else {
+		if (!(_taskCompleted) && {
+			typeName _this == typeName ""
+		}) then {
+			[_taskID, _this] call BIS_fnc_taskSetState;
+		};
+	};
+};
+
+case "EAS_hardDeck": {
+	if (!(_taskExists)) then {
+		[
+			west,
+			_taskID,
+			"",
+			objNull,
+			"ASSIGNED",
+			-1,
+			true,
+			"destroy",
+			false
+		] call BIS_fnc_taskCreate;
+	} else {
+		if (!(_taskCompleted) && {
+			typeName _this == typeName ""
+		}) then {
+			[_taskID, _this] call BIS_fnc_taskSetState;
+		};
+	};
+};
+
+case "EAS_controlWesternAirSpace": {
+	if (!(_taskExists)) then {
+		[
+			west,
+			_taskID,
+			"",
+			objNull,
+			"CREATED",
+			-1,
+			true,
+			"destroy",
+			false
 		] call BIS_fnc_taskCreate;
 	} else {
 		if (!(_taskCompleted) && {

@@ -1,1 +1,0 @@
-#include "..\..\..\..\shared\loadouts\seals\demo_combat.sqf";
