@@ -22,7 +22,7 @@ player allowDamage true;
 		"EAS_destroyCommsTowerA",
 		"EAS_destroyCommsTowerB",
 		"EAS_reconForTargets",
-		"EAS_destroyAA",
+		"EAS_hardDeck",
 	"EAS_controlWesternAirSpace"];
 
 	[] call EAS_fnc_nextFlow;

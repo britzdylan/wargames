@@ -18,6 +18,7 @@ class cfgFunctions {
 
         class events {
             file = "functions\events";
+            class towerADead {};
         }
 
         class cutscenes
