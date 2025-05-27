@@ -83,28 +83,6 @@ case "EAS_destroyCommsTowerB": {
 	};
 };
 
-case "EAS_reconForTargets": {
-	if (!(_taskExists)) then {
-		[
-			west,
-			_taskID,
-			"",
-			objNull,
-			"CREATED",
-			-1,
-			true,
-			"recon",
-			false
-		] call BIS_fnc_taskCreate;
-	} else {
-		if (!(_taskCompleted) && {
-			typeName _this == typeName ""
-		}) then {
-			[_taskID, _this] call BIS_fnc_taskSetState;
-		};
-	};
-};
-
 case "EAS_hardDeck": {
 	if (!(_taskExists)) then {
 		[
@@ -138,6 +116,28 @@ case "EAS_controlWesternAirSpace": {
 			-1,
 			true,
 			"destroy",
+			false
+		] call BIS_fnc_taskCreate;
+	} else {
+		if (!(_taskCompleted) && {
+			typeName _this == typeName ""
+		}) then {
+			[_taskID, _this] call BIS_fnc_taskSetState;
+		};
+	};
+};
+
+case "EAS_reconForTargets": {
+	if (!(_taskExists)) then {
+		[
+			west,
+			_taskID,
+			"",
+			objNull,
+			"CREATED",
+			-1,
+			true,
+			"recon",
 			false
 		] call BIS_fnc_taskCreate;
 	} else {

@@ -19,6 +19,8 @@ class cfgFunctions {
         class events {
             file = "functions\events";
             class towerADead {};
+            class towerBDead {};
+            class powerPlantDead {};
         }
 
         class cutscenes
@@ -26,7 +28,6 @@ class cfgFunctions {
             file = "functions\cutscenes";
             class intro {};
             class planeTakeOffTalk {};
-            class briefing {};
         };
 
     }
