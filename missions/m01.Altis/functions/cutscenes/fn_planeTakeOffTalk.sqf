@@ -48,13 +48,11 @@ EAS_blu_viper_2_1 flyInHeight 3000;
 	_viper21Wp_1
 ];
 
-_viper21Wp_2 setWaypointType "SAD";
+_viper21Wp_2 setWaypointType "LOITER";
 _viper21Wp_2 setWaypointSpeed "NORMAL";
 _viper21Wp_2 setWaypointCompletionRadius 3000;
 _viper21Wp_2 setWaypointCombatMode "RED";
-_viper21Wp_1 setWaypointScript "this flyInHeight 3000;
-this setCaptive false;
-";
+_viper21Wp_1 setWaypointScript "this reveal [EAS_aaf_plane_1, 4];this doTarget EAS_aaf_plane_1;this doWatch EAS_aaf_plane_1;";
 
 waitUntil {
 	EAS_blu_viper_2_1 inArea EAS_area_clearedDeck; // wait until is airborne

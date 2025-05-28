@@ -8,7 +8,7 @@ if (EAS_CURRENT_FLOW != 1) exitWith {};
 [] spawn EAS_fnc_powerPlantDead;
 [] spawn EAS_fnc_hardDeck;
 [] spawn EAS_fnc_tigrisOne;
-[] spawn EAS_fnc_tigrisTwo; 
+[] spawn EAS_fnc_tigrisTwo;
 [] spawn EAS_fnc_radarSite;
 [] spawn EAS_fnc_heliDead;
 [] spawn EAS_fnc_copilotDead;
@@ -22,6 +22,11 @@ sleep 5;
 ["EAS_controlWesternAirSpace", "SUCCEEDED"] call BIS_fnc_missionTasks;
 sleep 5;
 // TODO: play radio chatter
+
+// TODO: bring in reinforcements
+[EAS_BLU_REF, true] call EAS_fnc_freezeAI; // freeze reinforcements
+
+// 2 jets and 2 helicopters
 {
 	_x call BIS_fnc_missionTasks;
 	sleep 0.2;
