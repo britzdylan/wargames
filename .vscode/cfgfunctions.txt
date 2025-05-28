@@ -1,0 +1,26 @@
+
+    class EAS 
+    {
+
+        class missionFlow {
+            file = "functions\flow";
+            class f00 {};
+            class f01 {};
+            class f02 {};
+        }
+
+        class events {
+            file = "functions\events";
+            class towerADead {};
+            class towerBDead {};
+            class powerPlantDead {};
+        }
+
+        class cutscenes
+        {
+            file = "functions\cutscenes";
+            class intro {};
+            class planeTakeOffTalk {};
+        };
+
+    }

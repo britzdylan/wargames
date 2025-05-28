@@ -41,4 +41,28 @@ class CfgTaskDescriptions
 		description	= "Gain and maintain air superiority over the western AO. Eliminate all hostile aircraft and IADS components to secure airspace for friendly air operations.";
 		marker		= "";
 	};
+	class EAS_roe
+	{
+		title		= "Rules of Engagement";
+		description	= "Engage ONLY pre-designated targets, enemy aircraft, and ground-based anti-aircraft systems. All other targets are OFF LIMITS unless specifically authorized by command. Verify target identification before engagement.";
+		marker		= "";
+	};
+	class EAS_laseTigrisOne
+	{
+		title		= "Designate Tigris SAM Site - Naval Strike";
+		description	= "Use LITENING pod to designate SA-6 SAM site at Tigris-1. Once laser established, call 'Laser On Target' to naval command. Maintain designation for incoming Tomahawk from MK41 VLS. Break laser lock only after missile impact.";
+		marker		= "";
+	};
+	class EAS_laseTigrisTwo
+	{
+		title		= "Designate Tigris SAM Site - Naval Strike";
+		description	= "Use LITENING pod to designate SA-6 SAM site at Tigris-1. Once laser established, call 'Laser On Target' to naval command. Maintain designation for incoming Tomahawk from MK41 VLS. Break laser lock only after missile impact.";
+		marker		= "";
+	};
+	class EAS_radarSite
+	{
+		title		= "Destroy Radar Site";
+		description	= "Neutralize the enemy radar installation at the designated grid coordinates. Target destruction will significantly reduce hostile air defense capabilities and enhance friendly air operations.";
+		marker		= "";
+	};
 };

@@ -19,9 +19,15 @@ forEach [
 	// "EAS_destroyPowerPlant", 
 	// "EAS_destroyCommsTowerA", 
 	// "EAS_destroyCommsTowerB", 
-	"EAS_reconForTargets",
+	// "EAS_reconForTargets", 
 	"EAS_hardDeck",
 	"EAS_controlWesternAirSpace"
 ];
+
+waitUntil {
+	getPosASL player select 2 > 3000 || !alive player
+};
+
+["EAS_hardDeck", "SUCCEEDED"] call BIS_fnc_missionTasks;
 
 [] call EAS_fnc_nextFlow;

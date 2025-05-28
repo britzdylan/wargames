@@ -93,7 +93,7 @@ case "EAS_hardDeck": {
 			"ASSIGNED",
 			-1,
 			true,
-			"destroy",
+			"navigate",
 			false
 		] call BIS_fnc_taskCreate;
 	} else {
@@ -115,7 +115,7 @@ case "EAS_controlWesternAirSpace": {
 			"CREATED",
 			-1,
 			true,
-			"destroy",
+			"attack",
 			false
 		] call BIS_fnc_taskCreate;
 	} else {
@@ -137,7 +137,95 @@ case "EAS_reconForTargets": {
 			"CREATED",
 			-1,
 			true,
-			"recon",
+			"scout",
+			false
+		] call BIS_fnc_taskCreate;
+	} else {
+		if (!(_taskCompleted) && {
+			typeName _this == typeName ""
+		}) then {
+			[_taskID, _this] call BIS_fnc_taskSetState;
+		};
+	};
+};
+
+case "EAS_roe": {
+	if (!(_taskExists)) then {
+		[
+			west,
+			_taskID,
+			"",
+			objNull,
+			"CREATED",
+			-1,
+			true,
+			"target",
+			false
+		] call BIS_fnc_taskCreate;
+	} else {
+		if (!(_taskCompleted) && {
+			typeName _this == typeName ""
+		}) then {
+			[_taskID, _this] call BIS_fnc_taskSetState;
+		};
+	};
+};
+
+case "EAS_laseTigrisOne": {
+	if (!(_taskExists)) then {
+		[
+			west,
+			_taskID,
+			"",
+			objNull,
+			"CREATED",
+			-1,
+			true,
+			"kill",
+			false
+		] call BIS_fnc_taskCreate;
+	} else {
+		if (!(_taskCompleted) && {
+			typeName _this == typeName ""
+		}) then {
+			[_taskID, _this] call BIS_fnc_taskSetState;
+		};
+	};
+};
+
+case "EAS_laseTigrisTwo": {
+	if (!(_taskExists)) then {
+		[
+			west,
+			_taskID,
+			"",
+			objNull,
+			"CREATED",
+			-1,
+			true,
+			"kill",
+			false
+		] call BIS_fnc_taskCreate;
+	} else {
+		if (!(_taskCompleted) && {
+			typeName _this == typeName ""
+		}) then {
+			[_taskID, _this] call BIS_fnc_taskSetState;
+		};
+	};
+};
+
+case "EAS_radarSite": {
+	if (!(_taskExists)) then {
+		[
+			west,
+			_taskID,
+			"",
+			objNull,
+			"CREATED",
+			-1,
+			true,
+			"kill",
 			false
 		] call BIS_fnc_taskCreate;
 	} else {
