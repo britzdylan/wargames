@@ -3,25 +3,18 @@ class CfgSounds
 
     sounds[] = {};
 
-   class EAS_ep001_intro
+   class EAS_planeTakingOff
     {
-        name = "EAS_ep001_intro";
-        sound[] = {"sounds\EAS_ep001_intro.ogg", 3, 1, 25};
+        name = "EAS_planeTakingOff";
+        sound[] = {"sounds\EAS_planeTakingOff.ogg", 3, 1, 25};
         titles[] = {};
-
-        forceTitles = 1;
     };
-
-    class EAS_ep001_convo_briefing
+    class EAS_planeTakingOff_2
     {
-        name = "EAS_ep001_convo_briefing";
-        sound[] = {"sounds\EAS_ep001_convo_briefing.ogg", 5, 1, 30};
+        name = "EAS_planeTakingOff_2";
+        sound[] = {"sounds\EAS_planeTakingOff_2.ogg", 3, 1, 25};
         titles[] = {};
-
-        forceTitles = 1;
     };
-
-
 };
 
 class CfgMusic

@@ -17,4 +17,6 @@ _delay = round random 1 * 10; // random delay between 0 and 10 seconds
 
 sleep _delay + 5;
 
+EAS_RADAR_SITE_DEAD = true;
+
 ["EAS_radarSite", "SUCCEEDED"] call BIS_fnc_missionTasks;

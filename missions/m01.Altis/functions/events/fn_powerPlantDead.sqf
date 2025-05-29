@@ -16,4 +16,6 @@ _delay = round random 1 * 10; // random delay between 0 and 10 seconds
 
 sleep 5;
 
+EAS_POWER_PLANT_DEAD = true;
+
 ["EAS_destroyPowerPlant", "SUCCEEDED"] call BIS_fnc_missionTasks;

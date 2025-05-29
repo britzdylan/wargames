@@ -15,4 +15,6 @@ _delay = round random 1 * 10; // random delay between 0 and 10 seconds
 	["Air Boss", "Solid Copy", _delay + 4]
 ] spawn BIS_fnc_EXP_camp_playSubtitles;
 
+EAS_COPILOT_DEAD = true;
+
 sleep _delay + 5;

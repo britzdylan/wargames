@@ -8,7 +8,7 @@ waitUntil {
 };
 
 sleep 5;
-
+EAS_TIGRIS_ONE_DEAD = true;
 _delay = round random 1 * 10; // random delay between 0 and 10 seconds
 [
 	["2-2", "Tigris destroyed", _delay],

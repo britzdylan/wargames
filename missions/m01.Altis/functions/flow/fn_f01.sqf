@@ -23,10 +23,6 @@ sleep 5;
 sleep 5;
 // TODO: play radio chatter
 
-// TODO: bring in reinforcements
-[EAS_BLU_REF, true] call EAS_fnc_freezeAI; // freeze reinforcements
-
-// 2 jets and 2 helicopters
 {
 	_x call BIS_fnc_missionTasks;
 	sleep 0.2;

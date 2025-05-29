@@ -15,4 +15,6 @@ _delay = round random 1 * 10; // random delay between 0 and 10 seconds
 ] spawn BIS_fnc_EXP_camp_playSubtitles;
 sleep 5;
 
+EAS_TOWER_B_DEAD = true;
+
 ["EAS_destroyCommsTowerB", "SUCCEEDED"] call BIS_fnc_missionTasks;
