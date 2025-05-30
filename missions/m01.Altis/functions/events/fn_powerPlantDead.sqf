@@ -19,3 +19,4 @@ sleep 5;
 EAS_POWER_PLANT_DEAD = true;
 
 ["EAS_destroyPowerPlant", "SUCCEEDED"] call BIS_fnc_missionTasks;
+saveGame;

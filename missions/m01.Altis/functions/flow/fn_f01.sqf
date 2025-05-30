@@ -12,6 +12,7 @@ if (EAS_CURRENT_FLOW != 1) exitWith {};
 [] spawn EAS_fnc_radarSite;
 [] spawn EAS_fnc_heliDead;
 [] spawn EAS_fnc_copilotDead;
+[] spawn EAS_fnc_callReinf;
 
 waitUntil {
 	!alive EAS_aaf_plane_0 && !alive EAS_aaf_plane_1;
@@ -32,7 +33,7 @@ sleep 5;
 	"EAS_destroyCommsTowerA",
 	"EAS_destroyCommsTowerB"
 ];
-
+saveGame;
 // syrta fob
 // agios fuel depot
 // militry complex

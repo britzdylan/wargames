@@ -11,3 +11,5 @@ _delay = round random 1 * 10; // random delay between 0 and 10 seconds
 ] spawn BIS_fnc_EXP_camp_playSubtitles;
 
 [EAS_BLU_REF, true] call EAS_fnc_freezeAI;
+
+saveGame;

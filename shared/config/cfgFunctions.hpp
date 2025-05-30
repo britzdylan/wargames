@@ -8,4 +8,5 @@ class Global {
     class adjustVolume {};
     class nextFlow {};
     class applyLoadout {};
+    class vlsFire {};
 }

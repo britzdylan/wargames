@@ -18,3 +18,4 @@ sleep 5;
 EAS_TOWER_B_DEAD = true;
 
 ["EAS_destroyCommsTowerB", "SUCCEEDED"] call BIS_fnc_missionTasks;
+saveGame;

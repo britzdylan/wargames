@@ -16,6 +16,8 @@ _delay = round random 1 * 10; // random delay between 0 and 10 seconds
 
 sleep 5;
 
+[EAS_aaf_tigris_1, EAS_blu_vls] call EAS_fnc_vlsFire;
+
 "EAS_laseTigrisOne" call BIS_fnc_missionTasks;
 
 [] spawn EAS_fnc_tigrisDead;

@@ -29,6 +29,7 @@ class cfgFunctions {
             class tigrisTwo {};
             class tigrisTwoDead {};
             class hardDeck {};
+            class callReinf {};
         }
 
         class cutscenes
