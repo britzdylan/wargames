@@ -12,6 +12,21 @@ EAS_RADAR_SITE_DEAD = false;
 EAS_COPILOT_DEAD = false;
 EAS_skyIsClear = false;
 
+{
+	_x call BIS_fnc_missionTasks;
+}
+forEach [
+	"EAS_destroyPowerPlant",
+	"EAS_destroyCommsTowerA",
+	"EAS_destroyCommsTowerB",
+	"EAS_hardDeck",
+	"EAS_controlWesternAirSpace"
+];
+
+[] spawn EAS_fnc_towerADead;
+[] spawn EAS_fnc_towerBDead;
+[] spawn EAS_fnc_powerPlantDead;
+
 SCREEN_ID = "screen_x";
 [SCREEN_ID, false, 0] call BIS_fnc_blackOut; // always start with black screen registered
 
@@ -21,6 +36,9 @@ SCREEN_ID = "screen_x";
 sleep 5;
 // TODO: play map briefing
 
+player addAction ["Request VLS", {
+	[] call EAS_fnc_vls;
+}];
 EAS_MISSION_STARTED = true;
 waitUntil {
 	EAS_MISSION_STARTED == true;

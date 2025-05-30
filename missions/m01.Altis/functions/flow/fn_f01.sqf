@@ -3,9 +3,6 @@ if (EAS_CURRENT_FLOW != 1) exitWith {};
 
 [allUnits, true] call EAS_fnc_freezeAi;
 
-[] spawn EAS_fnc_towerADead;
-[] spawn EAS_fnc_towerBDead;
-[] spawn EAS_fnc_powerPlantDead;
 [] spawn EAS_fnc_hardDeck;
 [] spawn EAS_fnc_tigrisOne;
 [] spawn EAS_fnc_tigrisTwo;
@@ -24,13 +21,4 @@ sleep 5;
 sleep 5;
 // TODO: play radio chatter
 
-{
-	_x call BIS_fnc_missionTasks;
-	sleep 0.2;
-} forEach
-[
-	"EAS_destroyPowerPlant",
-	"EAS_destroyCommsTowerA",
-	"EAS_destroyCommsTowerB"
-];
 saveGame;
