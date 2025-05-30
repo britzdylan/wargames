@@ -30,9 +30,7 @@ sleep 5;
 [
 	"EAS_destroyPowerPlant",
 	"EAS_destroyCommsTowerA",
-	"EAS_destroyCommsTowerB",
-	"EAS_reconForTargets",
-	"EAS_roe"
+	"EAS_destroyCommsTowerB"
 ];
 
 // syrta fob

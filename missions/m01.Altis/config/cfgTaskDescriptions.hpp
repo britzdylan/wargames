@@ -21,13 +21,6 @@ class CfgTaskDescriptions
 		marker		= "EAS_destroyCommsTowerBLocation";
 	};
 
-	class EAS_reconForTargets
-	{
-		title		= "Conduct ISR Operations";
-		description	= "Execute intelligence, surveillance, and reconnaissance within the designated AO. Identify and report enemy positions, strength, and high-value targets for follow-on operations.";
-		marker		= "EAS_reconForTargetsLocation";
-	};
-
 	class EAS_hardDeck
 	{
 		title		= "Observe Hard Deck - Angels 10";
@@ -39,12 +32,6 @@ class CfgTaskDescriptions
 	{
 		title		= "Establish Air Superiority - Western Sector";
 		description	= "Gain and maintain air superiority over the western AO. Eliminate all hostile aircraft and IADS components to secure airspace for friendly air operations.";
-		marker		= "";
-	};
-	class EAS_roe
-	{
-		title		= "Rules of Engagement";
-		description	= "Engage ONLY pre-designated targets, enemy aircraft, and ground-based anti-aircraft systems. All other targets are OFF LIMITS unless specifically authorized by command. Verify target identification before engagement.";
 		marker		= "";
 	};
 	class EAS_laseTigrisOne

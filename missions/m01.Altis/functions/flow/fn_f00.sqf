@@ -9,7 +9,7 @@ if (EAS_CURRENT_FLOW != 0) exitWith {};
 // [[5, 1], [0, 1], [0, 1], [0, 1], [0, 1]] spawn EAS_fnc_adjustVolume;
 
 // freeze reinforcements
-EAS_BLU_REF = [EAS_blu_ah, EAS_blu_ah_1, driver EAS_blu_ah, gunner EAS_blu_ah, driver EAS_blu_ah_1, gunner EAS_blu_ah_1, EAS_blu_plane_1, EAS_blu_plane_2];
+EAS_BLU_REF = [EAS_blu_ah, EAS_blu_ah_1, driver EAS_blu_ah, gunner EAS_blu_ah, driver EAS_blu_ah_1, gunner EAS_blu_ah_1];
 [EAS_BLU_REF] call EAS_fnc_freezeAI;
 
 [] call EAS_fnc_planeTakeOffTalk;
@@ -23,7 +23,6 @@ forEach [
 	// "EAS_destroyPowerPlant", 
 	// "EAS_destroyCommsTowerA", 
 	// "EAS_destroyCommsTowerB", 
-	// "EAS_reconForTargets", 
 	"EAS_hardDeck",
 	"EAS_controlWesternAirSpace"
 ];

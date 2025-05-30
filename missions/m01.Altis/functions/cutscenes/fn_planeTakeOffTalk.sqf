@@ -71,10 +71,11 @@ playSound ["EAS_planeTakingOff_2", 1, 0];
 [
 	["4-6", "Good shot, Good engines, Good speed", 0],
 	["TAC", "Shark 4-6, maintain angels 10", 4],
-	["4-6", "Shark 4-6, Good copy.", 8],
-	["4-3", "4-6, 4-2, moving to cloud layer, minor turbulence", 12],
-	["4-6", "4-2, 4-6 copies, maintain formation", 16],
-	["4-3", "Let's clear these skies 4-6, watch your sensors, maintain altitude", 20]
+	["4-6", "Shark 4-6, Good copy.", 9],
+	["4-3", "4-6, 4-2, moving to cloud layer, minor turbulence", 13],
+	["4-6", "4-2, 4-6 copies, maintain formation", 18],
+	["4-3", "4-6, Maintain climb p 45. Break. We will level off at angels 10. Right turn heading 230. Break. Maintain 50% speed. On contact red contact, engage and break formation. How Copy?", 22],
+	["4-6", "4-3, 4-6 copies all", 40]
 ] spawn BIS_fnc_EXP_camp_playSubtitles;
 
 {

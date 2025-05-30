@@ -1,6 +1,6 @@
 waitUntil {
 	// Check if both towers are dead
-	if !(west knowsAbout driver EAS_aaf_tigris_2 > 3.9) then {
+	if (west knowsAbout EAS_aaf_tigris_2 > 3) then {
 		systemChat "Tigris Found";
 		true
 	} else {

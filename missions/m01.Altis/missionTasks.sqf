@@ -127,50 +127,6 @@ case "EAS_controlWesternAirSpace": {
 	};
 };
 
-case "EAS_reconForTargets": {
-	if (!(_taskExists)) then {
-		[
-			west,
-			_taskID,
-			"",
-			objNull,
-			"CREATED",
-			-1,
-			true,
-			"scout",
-			false
-		] call BIS_fnc_taskCreate;
-	} else {
-		if (!(_taskCompleted) && {
-			typeName _this == typeName ""
-		}) then {
-			[_taskID, _this] call BIS_fnc_taskSetState;
-		};
-	};
-};
-
-case "EAS_roe": {
-	if (!(_taskExists)) then {
-		[
-			west,
-			_taskID,
-			"",
-			objNull,
-			"CREATED",
-			-1,
-			true,
-			"target",
-			false
-		] call BIS_fnc_taskCreate;
-	} else {
-		if (!(_taskCompleted) && {
-			typeName _this == typeName ""
-		}) then {
-			[_taskID, _this] call BIS_fnc_taskSetState;
-		};
-	};
-};
-
 case "EAS_laseTigrisOne": {
 	if (!(_taskExists)) then {
 		[

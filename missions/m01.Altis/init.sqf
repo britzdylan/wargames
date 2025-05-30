@@ -11,7 +11,6 @@ EAS_TIGRIS_TWO_DEAD = false;
 EAS_RADAR_SITE_DEAD = false;
 EAS_COPILOT_DEAD = false;
 EAS_skyIsClear = false;
-EAS_ROE = false;
 
 SCREEN_ID = "screen_x";
 [SCREEN_ID, false, 0] call BIS_fnc_blackOut; // always start with black screen registered
