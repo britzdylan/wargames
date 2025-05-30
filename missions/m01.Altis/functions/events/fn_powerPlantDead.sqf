@@ -1,6 +1,6 @@
 waitUntil {
 	// Check if both towers are dead
-	if !(alive EAS_fuelTruckPowerPlant) then {
+	if !(alive EAS_storageBig && alive EAS_storageSmall_1 && alive EAS_storageSmall_2 && alive EAS_plantOfficeWhite) then {
 		systemChat "Power plant is destroyed";
 		true
 	} else {

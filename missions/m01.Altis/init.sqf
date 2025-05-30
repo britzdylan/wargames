@@ -17,7 +17,7 @@ SCREEN_ID = "screen_x";
 
 // intro
 [allUnits] call EAS_fnc_freezeAi;
-[] call EAS_fnc_intro;
+// [] call EAS_fnc_intro;
 sleep 5;
 // TODO: play map briefing
 
@@ -27,7 +27,9 @@ waitUntil {
 };
 sleep 1;
 
-[] call EAS_fnc_nextFlow;
+player addAction ["Request VLS", {
+	[] call EAS_fnc_vls;
+}];
 
 [] spawn {
 	waitUntil {
@@ -40,6 +42,8 @@ sleep 1;
 		EAS_TIGRIS_TWO_DEAD == true &&
 		EAS_RADAR_SITE_DEAD == true &&
 		EAS_skyIsClear == true
-	}
+	};
 	[] spawn EAS_fnc_endMission;
-}
+};
+
+[] spawn EAS_fnc_nextFlow;
