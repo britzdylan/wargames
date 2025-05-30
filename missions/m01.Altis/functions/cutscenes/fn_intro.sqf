@@ -1,4 +1,4 @@
-[[0, 0], [0, 0], [1, 1], [0, 0], [0, 0]] spawn EAS_fnc_adjustVolume;
+[[1, 0], [0, 0], [1, 1], [0, 0], [0, 0]] spawn EAS_fnc_adjustVolume;
 playMusic "EAS_ep001_intro";
 titleText ["What you are about to witness are key accounts from the Altis Intervention Crisis.\nViewer discretion is advised.", "BLACK FADED", -1];
 sleep 10;

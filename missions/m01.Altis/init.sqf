@@ -14,15 +14,12 @@ EAS_skyIsClear = false;
 
 SCREEN_ID = "screen_x";
 [SCREEN_ID, false, 0] call BIS_fnc_blackOut; // always start with black screen registered
-[[0, 1], [0, 1], [0, 1], [0, 1], [0, 1]] spawn EAS_fnc_adjustVolume;
 
 // intro
 [allUnits] call EAS_fnc_freezeAi;
-// [] call EAS_fnc_intro;
+[] call EAS_fnc_intro;
 sleep 5;
 // TODO: play map briefing
-
-// TODO: register event handlers
 
 EAS_MISSION_STARTED = true;
 waitUntil {
@@ -31,3 +28,18 @@ waitUntil {
 sleep 1;
 
 [] call EAS_fnc_nextFlow;
+
+[] spawn {
+	waitUntil {
+		EAS_MISSION_STARTED == true &&
+		EAS_TOWER_A_DEAD == true &&
+		EAS_TOWER_A1_DEAD == true &&
+		EAS_TOWER_B_DEAD == true &&
+		EAS_POWER_PLANT_DEAD == true &&
+		EAS_TIGRIS_ONE_DEAD == true &&
+		EAS_TIGRIS_TWO_DEAD == true &&
+		EAS_RADAR_SITE_DEAD == true &&
+		EAS_skyIsClear == true
+	}
+	[] spawn EAS_fnc_endMission;
+}

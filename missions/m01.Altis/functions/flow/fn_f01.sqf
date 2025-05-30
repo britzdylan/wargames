@@ -34,7 +34,3 @@ sleep 5;
 	"EAS_destroyCommsTowerB"
 ];
 saveGame;
-// syrta fob
-// agios fuel depot
-// militry complex
-// sf airfield
