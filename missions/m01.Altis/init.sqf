@@ -5,7 +5,6 @@ EAS_TOWER_A_DEAD = false;
 EAS_TOWER_A1_DEAD = false;
 EAS_TOWER_B_DEAD = false;
 EAS_POWER_PLANT_DEAD = false;
-EAS_HELI_DEAD = false;
 EAS_TIGRIS_ONE_DEAD = false;
 EAS_TIGRIS_TWO_DEAD = false;
 EAS_RADAR_SITE_DEAD = false;
@@ -32,13 +31,9 @@ SCREEN_ID = "screen_x";
 
 // intro
 [allUnits] call EAS_fnc_freezeAi;
-// [] call EAS_fnc_intro;
+[] call EAS_fnc_intro;
 sleep 5;
-// TODO: play map briefing
 
-player addAction ["Request VLS", {
-	[] call EAS_fnc_vls;
-}];
 EAS_MISSION_STARTED = true;
 waitUntil {
 	EAS_MISSION_STARTED == true;

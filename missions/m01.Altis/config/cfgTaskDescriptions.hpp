@@ -23,7 +23,7 @@ class CfgTaskDescriptions
 
 	class EAS_hardDeck
 	{
-		title		= "Observe Hard Deck - Angels 10";
+		title		= "Maintain Angels 10";
 		description	= "Maintain minimum altitude of 10,000 feet AGL. Hard deck established to ensure aircraft remain outside engagement envelope of enemy surface-to-air threats.";
 		marker		= "";
 	};
@@ -36,14 +36,14 @@ class CfgTaskDescriptions
 	};
 	class EAS_laseTigrisOne
 	{
-		title		= "Designate Tigris SAM Site - Naval Strike";
-		description	= "Use LITENING pod to designate SA-6 SAM site at Tigris-1. Once laser established, call 'Laser On Target' to naval command. Maintain designation for incoming Tomahawk from MK41 VLS. Break laser lock only after missile impact.";
+		title		= "Destroy AA SAM Site";
+		description	= "Use LITENING pod to designate SA-6 SAM site. Once laser established, call to naval command. Maintain designation for incoming Tomahawk from MK41 VLS. Break laser lock only after missile impact.";
 		marker		= "";
 	};
 	class EAS_laseTigrisTwo
 	{
-		title		= "Designate Tigris SAM Site - Naval Strike";
-		description	= "Use LITENING pod to designate SA-6 SAM site at Tigris-1. Once laser established, call 'Laser On Target' to naval command. Maintain designation for incoming Tomahawk from MK41 VLS. Break laser lock only after missile impact.";
+		title		= "Destroy AA SAM Site";
+		description	= "Use LITENING pod to designate SA-6 SAM site. Once laser established, call to naval command. Maintain designation for incoming Tomahawk from MK41 VLS. Break laser lock only after missile impact.";
 		marker		= "";
 	};
 	class EAS_radarSite

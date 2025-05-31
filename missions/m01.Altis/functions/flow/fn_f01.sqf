@@ -7,7 +7,6 @@ if (EAS_CURRENT_FLOW != 1) exitWith {};
 [] spawn EAS_fnc_tigrisOne;
 [] spawn EAS_fnc_tigrisTwo;
 [] spawn EAS_fnc_radarSite;
-[] spawn EAS_fnc_heliDead;
 [] spawn EAS_fnc_copilotDead;
 [] spawn EAS_fnc_callReinf;
 
@@ -19,6 +18,5 @@ sleep 5;
 
 ["EAS_controlWesternAirSpace", "SUCCEEDED"] call BIS_fnc_missionTasks;
 sleep 5;
-// TODO: play radio chatter
 
 saveGame;

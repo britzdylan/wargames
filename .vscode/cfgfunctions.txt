@@ -1,13 +1,6 @@
-#include "..\..\shared\config\description.hpp"
-#include "config\cfgTaskDescriptions.hpp"
-#include "config\cfgConstants.hpp"
-#include "config\cfgCutscenePositions.hpp"
-#include "config\cfgSounds.hpp"
 
-class cfgFunctions {
     class EAS 
     {
-        #include "..\..\shared\config\cfgFunctions.hpp"
 
         class missionFlow {
             file = "functions\flow";
@@ -45,4 +38,3 @@ class cfgFunctions {
         };
 
     }
-};

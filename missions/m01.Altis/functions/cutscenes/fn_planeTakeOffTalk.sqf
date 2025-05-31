@@ -58,7 +58,6 @@ waitUntil {
 
 [EAS_blu_viper_2_2] spawn BIS_fnc_aircraftCatapultLaunch;
 
-sleep 3;
 waitUntil {
 	// player is off the deck
 	player inArea EAS_area_clearedDeck;
@@ -70,8 +69,8 @@ playSound ["EAS_planeTakingOff_2", 1, 0];
 	["4-6", "Shark 4-6, Good copy.", 9],
 	["4-3", "4-6, 4-2, moving to cloud layer, minor turbulence", 13],
 	["4-6", "4-2, 4-6 copies, maintain formation", 18],
-	["4-3", "4-6, Maintain climb p 45. Break. We will level off at angels 10. Right turn heading 230. Break. Maintain 50% speed. On contact red contact, engage and break formation. How Copy?", 22],
-	["4-6", "4-3, 4-6 copies all", 40]
+	["4-3", "4-6, Maintain climb p 45. Break. We will level off at angels 10. Turn heading 230. Break. Maintain 50% speed. On red contact, engage and break formation. How Copy?", 22],
+	["4-6", "4-2, 4-6 copies all", 40]
 ] spawn BIS_fnc_EXP_camp_playSubtitles;
 
 {
