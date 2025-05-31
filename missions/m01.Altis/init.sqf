@@ -11,6 +11,14 @@ EAS_RADAR_SITE_DEAD = false;
 EAS_COPILOT_DEAD = false;
 EAS_skyIsClear = false;
 
+// mission params
+[0.3] call BIS_fnc_setOvercast;
+300 setOvercast 0.6;
+setViewDistance 10000;
+setDate [2035, 3, 29, 01, 0]; // 1:00 AM
+setTimeMultiplier 6;
+west setFriend [resistance, 0];
+
 {
 	_x call BIS_fnc_missionTasks;
 }
