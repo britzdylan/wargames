@@ -1,4 +1,4 @@
-// EAS_DEBUG = true;
+EAS_DEBUG = true;
 EAS_CURRENT_FLOW = -1;
 EAS_MISSION_STARTED = false;
 EAS_TOWER_A_DEAD = false;
@@ -27,11 +27,14 @@ forEach [
 [] spawn EAS_fnc_powerPlantDead;
 
 SCREEN_ID = "screen_x";
-[SCREEN_ID, false, 0] call BIS_fnc_blackOut; // always start with black screen registered
-
+if (!EAS_DEBUG) then {
+	[SCREEN_ID, false, 0] call BIS_fnc_blackOut; // always start with black screen registered
+};
 // intro
 [allUnits] call EAS_fnc_freezeAi;
-[] call EAS_fnc_intro;
+if (!EAS_DEBUG) then {
+	[] call EAS_fnc_intro;
+};
 sleep 5;
 
 EAS_MISSION_STARTED = true;
@@ -60,3 +63,36 @@ player addAction ["Request VLS", {
 };
 
 [] spawn EAS_fnc_nextFlow;
+
+if (EAS_DEBUG) then {
+	player addAction ["Destroy plains", {
+		EAS_aaf_plane_0 setDamage 1;
+		EAS_aaf_plane_1 setDamage 1;
+	}];
+
+	player addAction ["Destroy towers", {
+		EAS_towerA setDamage 1;
+		EAS_towerA_1 setDamage 1;
+		sleep 10;
+		EAS_towerB setDamage 1;
+	}];
+
+	player addAction ["Destroy power plant", {
+		{
+			_x setDamage 1;
+		} forEach [EAS_storageBig, EAS_storageSmall_1, EAS_storageSmall_2, EAS_plantOfficeWhite];
+	}];
+
+	player addAction ["Destroy Tigris", {
+		EAS_aaf_tigris_2 setDamage 1;
+		EAS_aaf_tigris_1 setDamage 1;
+	}];
+
+	player addAction ["Destroy radar", {
+		EAS_aaf_radar setDamage 1;
+	}];
+
+	player addAction ["Destroy copilot", {
+		EAS_blu_viper_2_1 setDamage 1;
+	}];
+};

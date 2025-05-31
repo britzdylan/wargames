@@ -8,7 +8,7 @@ if (EAS_CURRENT_FLOW != 1) exitWith {};
 [] spawn EAS_fnc_tigrisTwo;
 [] spawn EAS_fnc_radarSite;
 [] spawn EAS_fnc_copilotDead;
-[] spawn EAS_fnc_callReinf;
+[] spawn EAS_fnc_newHArdDeck;
 
 waitUntil {
 	!alive EAS_aaf_plane_0 && !alive EAS_aaf_plane_1;

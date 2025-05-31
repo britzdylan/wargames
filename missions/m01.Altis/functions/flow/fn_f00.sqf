@@ -1,5 +1,4 @@
-// setup enemy AI, player and play takeOff talk.
-if !(isNil "EAS_DEBUG") exitWith {};
+if (isNil "EAS_MISSION_STARTED") exitWith {};
 if (EAS_CURRENT_FLOW != 0) exitWith {};
 
 // private _introDuration = getNumber (missionConfigFile >> "cfgConstants" >> "INTRO_DURATION");
