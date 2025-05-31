@@ -3,6 +3,12 @@ class CfgSounds
 
     sounds[] = {};
 
+    class EAS_altitude
+    {
+        name = "EAS_altitude";
+        sound[] = {"sounds\EAS_altitude.ogg", 1, 1, 25};
+        titles[] = {};
+    };
    class EAS_planeTakingOff
     {
         name = "EAS_planeTakingOff";
