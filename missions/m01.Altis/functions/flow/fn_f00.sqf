@@ -11,6 +11,7 @@ if (EAS_CURRENT_FLOW != 0) exitWith {};
 waitUntil {
 	getPosASL player select 2 > 3000 || !alive player
 };
+EAS_isTalking = false;
 
 ["EAS_hardDeck", "SUCCEEDED"] call BIS_fnc_missionTasks;
 

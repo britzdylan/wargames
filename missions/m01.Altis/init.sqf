@@ -1,4 +1,4 @@
-EAS_DEBUG = true;
+EAS_DEBUG = false;
 EAS_CURRENT_FLOW = -1;
 EAS_MISSION_STARTED = false;
 EAS_TOWER_A_DEAD = false;
@@ -10,11 +10,14 @@ EAS_TIGRIS_TWO_DEAD = false;
 EAS_RADAR_SITE_DEAD = false;
 EAS_COPILOT_DEAD = false;
 EAS_skyIsClear = false;
+EAS_isTalking = false;
 
 // mission params
 [0.3] call BIS_fnc_setOvercast;
-300 setOvercast 0.6;
-setViewDistance 10000;
+300 setOvercast 0.4;
+setViewDistance 15000;
+setObjectViewDistance 15000;
+
 setDate [2035, 3, 29, 01, 0]; // 1:00 AM
 setTimeMultiplier 6;
 west setFriend [resistance, 0];
@@ -40,9 +43,9 @@ if (!EAS_DEBUG) then {
 };
 // intro
 [allUnits] call EAS_fnc_freezeAi;
-if (!EAS_DEBUG) then {
-	[] call EAS_fnc_intro;
-};
+// if (!EAS_DEBUG) then {
+// 	[] call EAS_fnc_intro;
+// };
 sleep 5;
 
 EAS_MISSION_STARTED = true;

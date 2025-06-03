@@ -6,35 +6,25 @@
             file = "functions\flow";
             class f00 {};
             class f01 {};
-        }
-
-        class actions {
-            file = "functions\actions";
-            class vls {};
-        }
-
-        class events {
-            file = "functions\events";
-            class towerADead {};
-            class towerBDead {};
-            class powerPlantDead {};
-            class copilotDead {};
-            class radarSite {};
-            class radarSiteDead {};
-            class tigrisDead {};
-            class tigrisOne {};
-            class tigrisTwo {};
-            class tigrisTwoDead {};
-            class hardDeck {};
-            class newHardDeck {};
-            class endMission {};
+            class f02 {};
         }
 
         class cutscenes
         {
             file = "functions\cutscenes";
             class intro {};
-            class planeTakeOffTalk {};
+            class briefing {};
         };
 
+        class loadouts
+        {
+            file = "functions\loadouts";
+            class lo_player {};
+            class lo_blu_everett {};
+            class lo_blu_givens {};
+            class lo_blu_lopez {};
+            class lo_blu_mckay {};
+            class lo_blu_walker {};
+            class lo_unarmedSeal {};
+        }
     }
