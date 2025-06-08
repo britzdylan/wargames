@@ -2,7 +2,7 @@
 playMusic "EAS_ep001_intro";
 titleText ["What you are about to witness are key accounts from the Altis Intervention Crisis.\nViewer discretion is advised.", "BLACK FADED", -1];
 sleep 10;
-titleText ["March 2035 - NATO arrives just a few miles off the coast of the small and unknown Mediterranean island of Altis.", "BLACK FADED", -1];
+titleText ["March 2035 - Task force spartan arrives just a few miles off the coast of the small and unknown Mediterranean island of Altis.", "BLACK FADED", -1];
 sleep 9;
 titleText ["A full-scale military intervention has been ordered by president Johnson with the objective of securing the region from AAF control.", "BLACK FADED", -1];
 sleep 9;
